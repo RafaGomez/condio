@@ -1,6 +1,6 @@
 {
   "name": "condio",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/condio.ssr.js",
   "browser": "dist/condio.esm.js",
@@ -15,7 +15,9 @@
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {},
   "devDependencies": {
@@ -24,10 +26,16 @@
     "@rollup/plugin-alias": "^2.2.0",
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-replace": "^2.3.2",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/vue": "^6.0.21",
     "@vue/cli-plugin-babel": "^4.3.1",
     "@vue/cli-service": "^4.3.1",
+    "babel-loader": "^8.1.0",
     "cross-env": "^7.0.2",
     "minimist": "^1.2.5",
+    "react-is": "^16.13.1",
     "rollup": "^2.7.3",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-terser": "^5.3.0",
